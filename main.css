@@ -1,0 +1,19 @@
+:root {
+    --main-background-color: #232830;
+}
+
+body {
+    background-color: var(--main-background-color);
+    color: white;
+    padding: 32px 64px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-list {
+    display: flex;
+    gap: 32px;
+}
