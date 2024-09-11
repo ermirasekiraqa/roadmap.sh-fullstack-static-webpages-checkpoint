@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="main.css" />
-    <title>Blog</title>
-  </head>
-  <body>
-    <header class="header">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="main.css" />
+  <title>Blog</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="#">writings.dev</a>
+    </div>
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-list-item">Categories</li>
+        <li class="navbar-list-item">Articles</li>
+        <li class="navbar-list-item">About</li>
+      </ul>
+    </nav>
+  </header>
+  <main></main>
+  <footer class="footer">
+    <div class="logo-author-wrapper">
       <div class="logo">
         <a href="#">writings.dev</a>
       </div>
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-list-item">Categories</li>
-          <li class="navbar-list-item">Articles</li>
-          <li class="navbar-list-item">About</li>
-        </ul>
-      </nav>
-    </header>
-    <main></main>
-    <footer class="footer">
-      <div>writings.dev</div>
-      <div>by@ermira</div>
-      <div>
-        <i class="fa fa-github"></i>
-        <div>
-          Follow <a href="https://github.com/ermirasekiraqa">@ermira</a>
-        </div>
+      <div class="author">
+        <a href="https://github.com/ermirasekiraqa">by @ermira</a>
       </div>
-    </footer>
-  </body>
+    </div>
+    <div class="author" id="follow-author">
+      <i class="fa fa-github"></i>
+      <div>
+        <a href="https://github.com/ermirasekiraqa">Follow @ermira</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

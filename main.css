@@ -1,19 +1,130 @@
 :root {
-    --main-background-color: #232830;
+    --dark-grey: #232830;
+    --fuscous-grey: #4D4D4D;
+    --salmon-pink: #FF7575;
+    --celestial-blue: #4699E0;
 }
 
 body {
-    background-color: var(--main-background-color);
+    background-color: var(--dark-grey);
     color: white;
-    padding: 32px 64px;
+    font-size: 24px;
 }
 
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 32px 64px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
 }
 
 .navbar-list {
     display: flex;
     gap: 32px;
+}
+
+.navbar-list-item {
+    list-style: none;
+    transition: color 0.5s ease;
+}
+
+.navbar-list-item:hover {
+    color: var(--salmon-pink);
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border: 3px solid var(--fuscous-grey);
+    padding: 32px 64px 128px 64px;
+}
+
+.logo-author-wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+.author {
+    background-color: var(--celestial-blue);
+    border-radius: 5px;
+    padding: 4px 8px;
+    transition: background-color 0.5s ease;
+    width: fit-content;
+}
+
+.author a {
+    color: white;
+    text-decoration: none;
+}
+
+.author:hover {
+    background-color: var(--salmon-pink);
+    cursor: pointer;
+}
+
+#follow-author {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .header {
+        padding: 8px 16px;
+    }
+
+    .logo a {
+        font-size: 24px;
+    }
+
+    .footer {
+        padding: 8px 16px 32px 16px;
+        display: block;
+    }
+
+    .logo-author-wrapper {
+        margin-bottom: 24px;
+    }
+
+    #follow-author {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+
+    .header {
+        padding: 16px 32px;
+    }
+
+    .footer {
+        padding: 16px 24px 48px 24px;
+        display: block;
+    }
+
+    .logo-author-wrapper {
+        margin-bottom: 32px;
+    }
+
+    #follow-author {
+        margin-left: 0;
+    }
 }
