@@ -8,7 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="main.css" />
-    <script defer src="main.js"></script>
+    <script defer type="module" src="js/main.js"></script>
     <title>Blog</title>
   </head>
 
@@ -29,11 +29,19 @@
       </nav>
     </header>
     <main>
-        <section class="hero">
-            <img src="images/feather-pen.png" class="hero-img"/>
-            <h2 class="hero-title">Writing for Developers</h2>
-            <p class="hero-text">Curated collection of articles for busy developers</p>
-        </section>
+      <section class="hero">
+        <img src="images/feather-pen.png" class="hero-img" />
+        <h2 class="hero-title">Writing for Developers</h2>
+        <p class="hero-text">
+          Curated collection of articles for busy developers
+        </p>
+      </section>
+      <section class="articles">
+        <!-- Articles are rendered from js -->
+      </section>
+      <div class="pagination">
+        <!-- Pagination buttons are rendered from js -->
+      </div>
     </main>
     <footer class="footer">
       <div class="logo-author-wrapper">
