@@ -1,6 +1,7 @@
 :root {
   --dark-grey: #232830;
   --fuscous-grey: #4d4d4d;
+  --light-grey: #909090;
   --salmon-pink: #ff7575;
   --celestial-blue: #4699e0;
 }
@@ -83,6 +84,26 @@ body {
   font-style: italic;
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+/* Categories */
+.select-display-and-categories {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 64px;
+}
+
+.select-display-and-categories button {
+  background-color: var(--dark-grey);
+  color: var(--light-grey);
+  border: none;
+  font-size: 18px;
+  transition: color 0.5s ease-in-out;
+}
+
+.select-display-and-categories button:hover {
+  cursor: pointer;
+  color: var(--salmon-pink);
 }
 
 /* Articles */

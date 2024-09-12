@@ -99,4 +99,14 @@ const articles = [
   },
 ];
 
-export default articles;
+const categories = [
+  "JavaScript",
+  "DevOps",
+  "Cloud",
+  "Terraform",
+  "Architecture",
+  "Scalability",
+  "Explainers",
+];
+
+export { articles, categories };

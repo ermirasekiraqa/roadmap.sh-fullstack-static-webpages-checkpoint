@@ -1,4 +1,5 @@
-import articles from "./data.js";
+import { articles } from "./data.js";
+import { categories } from "./data.js";
 
 let currentPageNumber = 1;
 const numberOfArticlesPerPage = 6;
@@ -92,11 +93,35 @@ function clickPageNumberButton(event) {
   }
 }
 
+function renderCategories() {
+  const categoriesSection = document.querySelector(".categories");
+  categories.forEach((category) => {
+    const categoryBtn = document.createElement("button");
+    categoryBtn.className = "category-button";
+    categoryBtn.textContent = category;
+    categoriesSection.appendChild(categoryBtn);
+  });
+}
+
+function clickBarsDisplayButton(event) {
+  const barsDisplayButton = event.target;
+  const articlesSection = document.querySelector(".articles");
+  articlesSection.style.display = "block";
+}
+
 function main() {
   // Add event listener to dropdown button
   document
     .querySelector(".navbar-dropdown-button")
     .addEventListener("click", clickDropdownMenuButton);
+
+  // Add event listener to bars display button
+  document
+    .querySelector(".bars-display-button")
+    .addEventListener("click", clickBarsDisplayButton);
+
+  // Render categories
+  renderCategories();
 
   // Render articles
   renderArticles();
