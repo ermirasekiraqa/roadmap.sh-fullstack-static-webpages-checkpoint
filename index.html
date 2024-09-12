@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <script defer src="main.js"></script>
+    <title>Blog</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="main.css" />
-  <title>Blog</title>
-</head>
-
-<body>
-  <header class="header">
-    <div class="logo">
-      <a href="#">writings.dev</a>
-    </div>
-    <nav class="navbar">
-      <ul class="navbar-list">
-        <li class="navbar-list-item">Categories</li>
-        <li class="navbar-list-item">Articles</li>
-        <li class="navbar-list-item">About</li>
-      </ul>
-    </nav>
-  </header>
-  <main></main>
-  <footer class="footer">
-    <div class="logo-author-wrapper">
+  <body>
+    <header class="header">
       <div class="logo">
         <a href="#">writings.dev</a>
       </div>
-      <div class="author">
-        <a href="https://github.com/ermirasekiraqa">by @ermira</a>
+      <nav class="navbar">
+        <button class="navbar-dropdown-button">
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-items">
+          <a href="#" class="dropdown-item">Categories</a>
+          <a href="#" class="dropdown-item">Articles</a>
+          <a href="#" class="dropdown-item">About</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/feather-pen.png" class="hero-img"/>
+            <h2 class="hero-title">Writing for Developers</h2>
+            <p class="hero-text">Curated collection of articles for busy developers</p>
+        </section>
+    </main>
+    <footer class="footer">
+      <div class="logo-author-wrapper">
+        <div class="logo">
+          <a href="#">writings.dev</a>
+        </div>
+        <div class="author">
+          <a href="https://github.com/ermirasekiraqa">by @ermira</a>
+        </div>
       </div>
-    </div>
-    <div class="author" id="follow-author">
-      <i class="fa fa-github"></i>
-      <div>
-        <a href="https://github.com/ermirasekiraqa">Follow @ermira</a>
+      <div class="author" id="follow-author">
+        <i class="fa fa-github"></i>
+        <div>
+          <a href="https://github.com/ermirasekiraqa">Follow @ermira</a>
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
