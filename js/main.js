@@ -19,7 +19,7 @@ function clickDropdownMenuButton() {
 }
 
 function renderArticles() {
-  const articlesSection = document.querySelector(".articles");
+  const articlesSection = document.querySelector(".articles-grid") || document.querySelector(".articles-block");
   articlesSection.innerHTML = "";
   for (
     let i = (currentPageNumber - 1) * numberOfArticlesPerPage;
@@ -94,19 +94,24 @@ function clickPageNumberButton(event) {
 }
 
 function renderCategories() {
-  const categoriesSection = document.querySelector(".categories");
+  const categoriesDropdown = document.querySelector(".categories-dropdown");
   categories.forEach((category) => {
-    const categoryBtn = document.createElement("button");
-    categoryBtn.className = "category-button";
-    categoryBtn.textContent = category;
-    categoriesSection.appendChild(categoryBtn);
+    const categoryOption = document.createElement("option");
+    categoryOption.className = "category";
+    categoryOption.value = category.toLowerCase();
+    categoryOption.textContent = category;
+    categoriesDropdown.appendChild(categoryOption);
   });
 }
 
-function clickBarsDisplayButton(event) {
-  const barsDisplayButton = event.target;
-  const articlesSection = document.querySelector(".articles");
-  articlesSection.style.display = "block";
+function clickBarsDisplayButton() {
+  const articlesSection = document.querySelector(".articles-grid");
+  articlesSection.className = "articles-block";
+}
+
+function clickGridDisplayButton() {
+  const articlesSection = document.querySelector(".articles-block");
+  articlesSection.className = "articles-grid";
 }
 
 function main() {
@@ -119,6 +124,11 @@ function main() {
   document
     .querySelector(".bars-display-button")
     .addEventListener("click", clickBarsDisplayButton);
+
+  // Add event listener to grid display button
+  document
+    .querySelector(".grid-display-button")
+    .addEventListener("click", clickGridDisplayButton);
 
   // Render categories
   renderCategories();

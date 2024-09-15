@@ -1,70 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="main.css" />
-    <script defer type="module" src="js/main.js"></script>
-    <title>Blog</title>
-  </head>
 
-  <body>
-    <header class="header">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="main.css" />
+  <script defer type="module" src="js/main.js"></script>
+  <title>Blog</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="#">writings.dev</a>
+    </div>
+    <nav class="navbar">
+      <button class="navbar-dropdown-button">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="dropdown-items">
+        <a href="#" class="dropdown-item">Categories</a>
+        <a href="#" class="dropdown-item">Articles</a>
+        <a href="#" class="dropdown-item">About</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <img src="images/feather-pen.png" class="hero-img" />
+      <h2 class="hero-title">Writing for Developers</h2>
+      <p class="hero-text">
+        Curated collection of articles for busy developers
+      </p>
+    </section>
+    <section class="display-and-categories">
+      <button class="grid-display-button"><i class="fa fa-th-large"></i></button>
+      <button class="bars-display-button"><i class="fa fa-bars"></i></button>
+      <div class="categories">
+        <select class="categories-dropdown">
+          <option value="" selected disabled>Select category</option>
+          <!-- Options are rendered from js -->
+        </select>
+      </div>
+    </section>
+    <section class="articles">
+      <div class="articles-grid">
+        <!-- Articles are rendered from js -->
+      </div>
+      <div class="pagination">
+        <!-- Pagination buttons are rendered from js -->
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="logo-author-wrapper">
       <div class="logo">
         <a href="#">writings.dev</a>
       </div>
-      <nav class="navbar">
-        <button class="navbar-dropdown-button">
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="dropdown-items">
-          <a href="#" class="dropdown-item">Categories</a>
-          <a href="#" class="dropdown-item">Articles</a>
-          <a href="#" class="dropdown-item">About</a>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <section class="hero">
-        <img src="images/feather-pen.png" class="hero-img" />
-        <h2 class="hero-title">Writing for Developers</h2>
-        <p class="hero-text">
-          Curated collection of articles for busy developers
-        </p>
-      </section>
-      <section class="select-display-and-categories">
-        <!-- grid display button -->
-        <button class="bars-display-button"><i class="fa fa-bars"></i></button>
-        <div class="categories">
-          <!-- Categories are rendered from js -->
-        </div>
-      </section>
-      <section class="articles">
-        <!-- Articles are rendered from js -->
-      </section>
-      <section class="pagination">
-        <!-- Pagination buttons are rendered from js -->
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="logo-author-wrapper">
-        <div class="logo">
-          <a href="#">writings.dev</a>
-        </div>
-        <div class="author">
-          <a href="https://github.com/ermirasekiraqa">by @ermira</a>
-        </div>
+      <div class="author">
+        <a href="https://github.com/ermirasekiraqa">by @ermira</a>
       </div>
-      <div class="author" id="follow-author">
-        <i class="fa fa-github"></i>
-        <div>
-          <a href="https://github.com/ermirasekiraqa">Follow @ermira</a>
-        </div>
+    </div>
+    <div class="author" id="follow-author">
+      <i class="fa fa-github"></i>
+      <div>
+        <a href="https://github.com/ermirasekiraqa">Follow @ermira</a>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
